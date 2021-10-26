@@ -54,7 +54,7 @@ $resultado_listas = mysqli_query($con, $result_listas);
         $(document).ready(function() {
             $(document).on('click', '#apagar', function() {
                 var nome_produto = $(this).data('nome_produto');
-                window.location.href = "apagar_produto.php?nome_produto=" + nome_produto;
+                window.location.href = "../Controller/apagar_produto.php?nome_produto=" + nome_produto;
             });
         });
     </script>

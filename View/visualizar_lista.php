@@ -45,7 +45,7 @@ $resultado_listas = mysqli_query($con, $result_listas);
                                 <td>
                                    <!--  <button type="button" class="btn btn-xs btn-primary"action="visualizar_lista.php">Visualizar</button> -->
                                     <!-- <button type="button" class="btn btn-xs btn-warning">Editar Produto</button> -->
-                                    <button type="button" class="btn btn-xs btn-danger">Apagar Produto</button>
+                                    <button type="button" data-titulo="<?php echo $rows_listas['titulo'];?>" data-mes="<?php echo $rows_listas['mes'];?>" data-quantidade="<?php echo $rows_listas['quantidade'];?>" data-nome_produto="<?php echo $rows_listas['nome_produto'];?>" class="btn btn-xs btn-danger" id="apagar">Apagar Produto</button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -57,6 +57,17 @@ $resultado_listas = mysqli_query($con, $result_listas);
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '#apagar', function() {
+                var nome_produto = $(this).data('nome_produto');
+                var titulo = $(this).data('titulo');
+                var mes = $(this).data('mes');
+                var quantidade = $(this).data('quantidade');
+                window.location.href = "../Controller/apagar_produto_lista.php?nome_produto=" + nome_produto + "?titulo=" + titulo + "?mes="+ mes + "?quantidade=" + quantidade;
+            });
+        });
+    </script>
 </body>
 
 </html>

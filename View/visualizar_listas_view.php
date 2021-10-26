@@ -60,7 +60,7 @@ $resultado_listas = mysqli_query($con, $result_listas);
             });
             $(document).on('click', '#apagar', function() {
                 var titulo = $(this).data('titulo');
-                window.location.href = "apagar_lista.php?titulo=" + titulo;
+                window.location.href = "../Controller/apagar_lista.php?titulo=" + titulo;
             });
         });
     </script>
