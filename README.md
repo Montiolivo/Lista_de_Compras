@@ -5,8 +5,12 @@ Esse projeto é a criação de uma lista de compras básica.
 Para desenvolver o sistema, como se trata de uma criação de lista, bem simples, eu usei PHP puro, sem nenhum framework.
 
 # Tecnologias:
+
     - [PHP]( https://www.php.net/).
     - [Bootstrap](https://getbootstrap.com/).
+    - Jquery
+    - Mysql
+    - JavaScript
 
 - Para executar o projeto, eu usei o XAMPP. Basta clonar a pasta do projeto para dentro do htdocs.
 
